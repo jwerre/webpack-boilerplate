@@ -1,4 +1,4 @@
-Webpack Boilerplate
+# Webpack Boilerplate
 
 A simple boilerplate for a vanila website using webpack
 
