@@ -1,22 +1,17 @@
 extends ../../layouts/main.pug
 
 block title
-  title My Page - Blog
+	title My Page - Blog
 
-block basicSeo
-  meta(name='description' content='Blog page')
-  meta(name='keywords', content='blog, page')
-  meta(name='author' content='')
-
-block manifestBrowserconfigFiles
-  link(rel='manifest', href='../manifest.json')
-  meta(name='msapplication-config' content='../browserconfig.xml')
+block meta
+	meta(name='description' content='Blog page')
+	meta(name='keywords', content='blog, page')
+	meta(name='author' content='')
 
 block content
 
-  +header('blog')
+	+header('blog')
 
-  //- Desktop page
-  section.page.blog__page
-    h1 Blog
+	section
+		h1 Blog
 

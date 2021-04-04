@@ -80,7 +80,7 @@ module.exports = (env) => {
 		},
 		output: {
 			path: DIST_DIR,
-			filename: 'assets/js/[name].[hash:7].bundle.js'
+			filename: 'assets/js/[name].[fullhash].bundle.js'
 		},
 		devServer: {
 			contentBase: SRC_DIR,
@@ -164,14 +164,14 @@ module.exports = (env) => {
 					loader: 'url-loader',
 					options: {
 						limit: 3000,
-						name: 'assets/images/[name].[hash:7].[ext]'
+						name: 'assets/images/[name].[fullhash].[ext]'
 					}
 				},
 				{
 					test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
 					loader: 'url-loader',
 					options: {
-						name: 'assets/fonts/[name].[hash:7].[ext]'
+						name: 'assets/fonts/[name].[fullhash].[ext]'
 					}
 				},
 				{
@@ -179,7 +179,7 @@ module.exports = (env) => {
 					loader: 'url-loader',
 					options: {
 						limit: 10000,
-						name: 'assets/videos/[name].[hash:7].[ext]'
+						name: 'assets/videos/[name].[fullhash].[ext]'
 					}
 				}
 			]
@@ -187,9 +187,9 @@ module.exports = (env) => {
 		optimization: {
 			minimizer: [
 				new TerserPlugin({
-					cache: true,
+					// cache: true,
 					parallel: true,
-					sourceMap: true,
+					// sourceMap: true,
 				}),
 			],
 			splitChunks: {
@@ -198,7 +198,7 @@ module.exports = (env) => {
 					vendors: false,
 					// vendor chunk
 					vendor: {
-						filename: 'assets/js/vendor.[hash:7].bundle.js',
+						filename: 'assets/js/vendor.[fullhash].bundle.js',
 						// sync + async chunks
 						chunks: 'all',
 						// import file path containing node_modules
@@ -224,7 +224,7 @@ module.exports = (env) => {
 			]),
 
 			new MiniCssExtractPlugin({
-				filename: 'assets/css/[name].[hash:7].bundle.css',
+				filename: 'assets/css/[name].[fullhash].bundle.css',
 				chunkFilename: '[id].css',
 			}),
 			
