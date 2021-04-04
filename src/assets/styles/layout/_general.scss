@@ -9,9 +9,9 @@ body {
   height: 100%;
 }
 body {
-  @include isFlex(center, center);
-  font-family: $quicksand;
-  background: $darkslategray;
+  @include flex(center, center);
+  font-family: $heebo;
+  background: $dark;
   color: white;
   margin: 0;
   padding: 0;

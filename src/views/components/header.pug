@@ -1,0 +1,44 @@
+mixin header(currentPage)
+
+	header#main-header 
+
+		.container
+
+			.row.align-items-center.justify-content-between
+				.col-4
+					a(href='/').logo
+						img(src="/assets/images/logo.svg", alt="Logo" height="40")
+
+					|  Logo
+				.col-4
+					nav.menu(role="navigation")
+						ul
+							li
+								a(href='/', class=currentPage === 'home' ? 'active' : '') Home
+							li
+								a(href='/contact', class=currentPage === 'contact' ? 'active' : '') Contact
+							li
+								a(href='/blog', aria-haspopup="true" class=currentPage === 'blog' ? 'active' : '') Blog
+								ul( class="dropdown" aria-label="submenu")
+									li
+										a( href='/blog/post') Blog Post
+									li
+										a(href="#") Sub-2
+									li
+										a(href="#") Sub-3
+							li
+								a(href='/about', aria-haspopup="true" class=currentPage === 'about' ? 'active' : '') About
+
+					//- nav.menu(role="navigation")
+					//- 	ul
+					//- 		li
+					//- 			
+					//- 		li
+					//- 			
+					//- 		li
+					//- 			
+					//- 			ul.dropdown(aria-label="submenu")
+					//- 				li
+					//- 					a( href='/blog/post') Blog Post
+					//- 					a( href="#") Sub 2
+					//- 					a( href="#") Sub 3

@@ -1,3 +1,5 @@
+
+@import '../../../node_modules/bootstrap/scss/bootstrap-grid.scss';
 @import 'normalize.css';
 
 /*
@@ -16,20 +18,21 @@
 /*
   Components
 */
-@import './components/footer';
 @import './components/button';
 @import './components/link';
-@import './components/_menu';
+@import './components/menu';
 
 /*
-  Layout
+Layout
 */
 @import './layout/page';
 @import './layout/general';
+@import './layout/footer';
+@import './layout/header';
 
 /*
   Pages
 */
-@import './pages/index';
+@import './pages/home';
 @import './pages/blog';
 @import './pages/contact';

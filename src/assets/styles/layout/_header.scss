@@ -1,0 +1,28 @@
+/* src/assets/styles/components/_footer.scss  */
+
+header#main-header {
+
+  background: $primary;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+
+  .logo {
+    vertical-align: middle;
+  }
+
+  .menu {
+  }
+
+}
+
+
+/*
+  Responsive
+*/
+
+@media screen and(max-width: $grid-width) {
+
+}

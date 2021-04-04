@@ -3,8 +3,12 @@
 // Styles
 import 'styles/_app.scss';
 
-$(function() {
-  console.log('Ready!');
+// Javascript
+import {init} from 'scripts/main';
 
-  require('scripts/demo');
-})
+(function(){
+
+	init();
+
+})(); 
+

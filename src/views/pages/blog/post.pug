@@ -1,11 +1,11 @@
-extends ../layouts/main.pug
+extends ../../layouts/main.pug
 
 block title
-  title My Page - Contact
+  title My Page - Blog post
 
 block basicSeo
-  meta(name='description' content='Contact page')
-  meta(name='keywords', content='contact, page')
+  meta(name='description' content='Blog postpage')
+  meta(name='keywords', content='blog, page, post')
   meta(name='author' content='')
 
 block manifestBrowserconfigFiles
@@ -15,7 +15,8 @@ block manifestBrowserconfigFiles
 block content
 
   // Menu
-  +header('contact')
+  +header('blog-post')
 
+  //- Desktop page
   section
-    h1 Contact
+    h1 Blog Post
